@@ -42,7 +42,7 @@ def mail():
         msg['To'] = formataddr(["习讯云自动签到程序", toaddrs])  # 收件人邮箱昵称、收件人邮箱账号
         msg['Subject'] = "习讯云自动签到提醒"  # 邮件的主题
 
-        server = smtplib.SMTP_SSL("smtp.qq.com",465)  # qq邮箱SMTP服务器，端口是25
+        server = smtplib.SMTP_SSL("smtp.qq.com",port=465)  # qq邮箱SMTP服务器，端口是25
         server.login(fromaddrs, password2)  # 发件人邮箱账号、邮箱密码
         server.sendmail(fromaddrs, [toaddrs, ], msg.as_string())  # 发件人邮箱账号、收件人邮箱账号、发送邮件
         server.quit()  # 关闭连接
