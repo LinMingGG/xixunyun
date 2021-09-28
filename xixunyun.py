@@ -39,7 +39,7 @@ toaddrs = os.environ["EMAIL"]
 def mail():
     ret = True
     try:
-        msg = MIMEText(wdnmd, 'plain', 'utf-8')
+        msg = MIMEText(response.json(), 'plain', 'utf-8')
         msg['From'] = formataddr(["习讯云签到提醒", fromaddrs])  # 发件人邮箱昵称、发件人邮箱账号
         msg['To'] = formataddr(["习讯云自动签到程序", toaddrs])  # 收件人邮箱昵称、收件人邮箱账号
         msg['Subject'] = "习讯云自动签到提醒"  # 邮件的主题
