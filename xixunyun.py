@@ -28,3 +28,29 @@ if len(SCKEY) >= 1:
   url = 'https://sc.ftqq.com/'+SCKEY+'.send'
   requests.post(url, data={"text": "习讯云签到提醒", "desp": response.json()})
 
+import smtplib
+from email.mime.text import MIMEText
+from email.utils import formataddr
+fromaddrs = '1036933769@qq.com'
+password2 = 'szxnazldaowdbead'  
+toaddrs = os.environ["EMAIL"]
+def mail():
+    ret = True
+    try:
+        msg = MIMEText(sign_request.text, 'plain', 'utf-8')
+        msg['From'] = formataddr(["习讯云签到提醒", fromaddrs])  # 发件人邮箱昵称、发件人邮箱账号
+        msg['To'] = formataddr(["习讯云自动签到程序", toaddrs])  # 收件人邮箱昵称、收件人邮箱账号
+        msg['Subject'] = "习讯云自动签到提醒"  # 邮件的主题
+
+        server = smtplib.SMTP_SSL("smtp.qq.com",)  # qq邮箱SMTP服务器，端口是25
+        server.login(fromaddrs, password2)  # 发件人邮箱账号、邮箱密码
+        server.sendmail(fromaddrs, [toaddrs, ], msg.as_string())  # 发件人邮箱账号、收件人邮箱账号、发送邮件
+        server.quit()  # 关闭连接
+    except Exception:  # 如果 try 中的语句没有执行，则会执行下面的 ret=False
+        ret = False
+    return ret
+ret = mail()
+if ret:
+    print("邮件发送成功")
+else:
+    print("邮件发送失败")
