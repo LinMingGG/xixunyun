@@ -23,7 +23,6 @@ jobs:
         python-version: 3.8
     - name: Checkout
       run: |
-        git clone https://github.com/LinMingGG/xixunyun.git
         pip install requests
     - name: '运行 【签到】'
       run: |
