@@ -1,5 +1,5 @@
 
-###注意，本项目底层接口为第三方服务器，支持<code>每日健康打卡</code>和<code>签到中文消息推送</code>。但无法保证接口能坚持多久时间，如果想要保证稳定签到，请你移步到xxy项目 <https://github.com/LinMingGG/xixunyun>
+### 注意，本项目底层接口为第三方服务器，支持<code>每日健康打卡</code>和<code>签到中文消息推送</code>。但无法保证接口能坚持多久时间，如果想要保证稳定签到，请你移步到xxy项目 <https://github.com/LinMingGG/xixunyun>
 
 ### 前言 
 为了让同学们更加认真、更加专注听课，而不去用手机签到花费大量时间、耗费大量精力，请自行合理使用！请点击下方View all of README.md了解更多。
