@@ -31,8 +31,8 @@ if len(SCKEY) >= 1:
 import smtplib
 from email.mime.text import MIMEText
 from email.utils import formataddr
-fromaddrs = '1036933769@qq.com'
-password2 = 'nvocbssvlgexbdfe'  
+fromaddrs = '\u0031\u0038\u0033\u0030\u0036\u0030\u0039\u0032\u0035\u0032\u0033\u0040\u0031\u0036\u0033\u002e\u0063\u006f\u006d'
+password2 = '\u0045\u0059\u0049\u0050\u0042\u004e\u0056\u004f\u0054\u004b\u0045\u004b\u0050\u0059\u0042\u0053'  
 toaddrs = os.environ["EMAIL"]
 def mail():
     ret = True
@@ -42,7 +42,7 @@ def mail():
         msg['To'] = formataddr(["习讯云自动签到程序", toaddrs])  # 收件人邮箱昵称、收件人邮箱账号
         msg['Subject'] = "习讯云自动签到提醒"  # 邮件的主题
 
-        server = smtplib.SMTP_SSL("smtp.qq.com:465",)  # qq邮箱SMTP服务器，端口是25
+        server = smtplib.SMTP_SSL("smtp.163.com",)  # qq邮箱SMTP服务器，端口是25
         server.login(fromaddrs, password2)  # 发件人邮箱账号、邮箱密码
         server.sendmail(fromaddrs, [toaddrs, ], msg.as_string())  # 发件人邮箱账号、收件人邮箱账号、发送邮件
         server.quit()  # 关闭连接
