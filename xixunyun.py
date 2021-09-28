@@ -48,9 +48,9 @@ def mail():
         server.login(fromaddrs, password2)  # 发件人邮箱账号、邮箱密码
         server.sendmail(fromaddrs, [toaddrs, ], msg.as_string())  # 发件人邮箱账号、收件人邮箱账号、发送邮件
         server.quit()  # 关闭连接
-   # except Exception:  # 如果 try 中的语句没有执行，则会执行下面的 ret=False
-        #ret = False
-    #return ret
+    except Exception:  # 如果 try 中的语句没有执行，则会执行下面的 ret=False
+        ret = True
+    return ret
 #ret = mail()
 #if ret:
   # print("邮件发送成功")
