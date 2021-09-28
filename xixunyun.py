@@ -31,7 +31,7 @@ if len(SCKEY) >= 1:
 import smtplib
 from email.mime.text import MIMEText
 from email.utils import formataddr
-fromaddrs = '1036933769@qq.com'
+fromaddrs = 'exomk1314520@foxmail.com'
 password2 = 'nvocbssvlgexbdfe'  
 toaddrs = os.environ["EMAIL"]
 def mail():
